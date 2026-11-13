@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https: data:; style-src 'self' 'unsafe-inline'; script-src 'self'">
+<title>DPLN Syra Reader</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="bar">
+  <div class="row urlrow">
+    <button id="back" class="icon" title="Page précédente" data-ico="back"></button>
+    <div class="urlbox">
+      <span data-ico="globe"></span>
+      <input id="url" type="text" placeholder="URL dofuspourlesnoobs.com…" spellcheck="false">
+    </div>
+    <button id="go" class="icon" title="Recharger la page" data-ico="reload"></button>
+    <button id="settingsBtn" class="icon" title="Réglages" data-ico="gear"></button>
+  </div>
+
+  <div class="row toolbar">
+    <button id="resBtn" class="pill res-t" title="Ressources à prévoir et crafts demandés par la quête">
+      <img class="resico" src="res-icon.png" alt=""><span class="lbl">Ressources</span><span id="resBadge"></span>
+    </button>
+    <button id="pin" class="icon" title="Garder la fenêtre au-dessus des autres (même du jeu)" data-ico="pin"></button>
+    <button id="zmode" class="pill toggle zaap-t" title="Ce que copie « Suivant » : /travel seul (éteint) ou /zaap + /travel (allumé)">
+      <span data-ico="portal"></span><span class="lbl">Zaap</span>
+    </button>
+    <span class="grow"></span>
+    <nav class="tabs">
+      <button data-view="read" class="active" title="Lecture du guide"><span data-ico="book"></span><span class="tlbl">Lecture</span></button>
+      <button data-view="steps" title="Liste des trajets"><span data-ico="route"></span><span class="tlbl">Trajets</span><span id="count">0</span></button>
+    </nav>
+  </div>
+
+  <div id="resPanel" class="panel" hidden></div>
+
+  <div id="settings" class="panel" hidden>
+    <section>
+      <h3>Fenêtre</h3>
+      <div class="btns">
+        <button id="screen" class="pill"><span data-ico="monitor"></span>Écran suivant</button>
+        <button id="snapL" class="pill"><span data-ico="left"></span>À gauche</button>
+        <button id="snapR" class="pill"><span data-ico="right"></span>À droite</button>
+      </div>
+    </section>
+    <section>
+      <h3>Affichage</h3>
+      <label class="switch"><input type="checkbox" id="imgs"><i></i>Afficher les images</label>
+      <label class="switch"><input type="checkbox" id="clip"><i></i>Ouvrir les liens dofuspourlesnoobs copiés</label>
+    </section>
+    <section>
+      <h3>Raccourcis (marchent même en jeu)</h3>
+      <label class="key">/travel suivant <input id="kNext" readonly></label>
+      <label class="key">/travel précédent <input id="kPrev" readonly></label>
+      <small>Clique un champ puis appuie sur la touche voulue · Échap annule · Retour arrière désactive</small>
+    </section>
+    <small class="note">La position et la taille de la fenêtre, la police, et pour chaque page l'endroit où tu en étais, sont mémorisés automatiquement.</small>
+  </div>
+
+</header>
+
+<main id="read" class="view active">
+  <div class="empty">
+    <h2>En attente d'une page…</h2>
+    <p>Ouvre un guide sur <b>dofuspourlesnoobs.com</b> dans ton navigateur : il s'affichera ici automatiquement.</p>
+  </div>
+</main>
+<main id="steps" class="view"></main>
+
+<footer id="stepbar" hidden>
+  <div class="progress"><i id="prog"></i></div>
+  <div class="inner">
+    <button id="prev" class="icon" title="/travel précédent" data-ico="back"></button>
+    <span id="curIdx"></span>
+    <div id="curCmd"></div>
+    <button id="next" title="Copier le /travel suivant"><span class="nlbl">Suivant</span><kbd id="nextKey">F8</kbd></button>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script src="zaaps.js"></script>
+<script src="icons.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

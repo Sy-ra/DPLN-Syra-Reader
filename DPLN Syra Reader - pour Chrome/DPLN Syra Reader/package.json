@@ -1,0 +1,16 @@
+{
+  "name": "dofus-reader",
+  "version": "1.0.0",
+  "description": "Lecteur vertical épinglable pour dofuspourlesnoobs.com avec commandes /travel et /zaap",
+  "main": "main.js",
+  "scripts": {
+    "app": "electron .",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}

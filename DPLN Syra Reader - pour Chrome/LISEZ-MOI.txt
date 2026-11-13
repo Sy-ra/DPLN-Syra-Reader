@@ -1,0 +1,13 @@
+DPLN SYRA READER - installation avec Chrome
+========================================
+
+Le tuto complet, etape par etape : ouvre "Tuto - à ouvrir en premier.html".
+
+En resume (rien d'autre a installer) :
+1. Dans le dossier "DPLN Syra Reader", double-clique "1 - Installer.bat"
+   -> cree un raccourci "DPLN Syra Reader" (icone du chat) sur le Bureau.
+2. Dans Chrome : chrome://extensions -> active "Mode developpeur"
+   -> "Charger l'extension non empaquetée" -> choisis le dossier "Extension Chrome".
+3. Lance l'app (raccourci du Bureau), puis ouvre un guide dofuspourlesnoobs.com dans Chrome.
+
+Touches : F8 = /travel suivant, F7 = precedent (meme en jeu). Ctrl + molette = taille du texte.

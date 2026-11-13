@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DPLN Syra Reader – Installation avec Chrome</title>
+<style>
+  :root { --bg:#121419; --panel:#1a1d24; --line:#2b303a; --text:#e7e9ee; --muted:#9aa1ad; --accent:#4da6ff; --travel:#34c3b0; --ok:#4ccf7a; --warn:#ffb454; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.65 "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 780px; margin: 0 auto; padding: 32px 18px 60px; }
+  h1 { font-size: 30px; margin: 0 0 4px; color: var(--accent); }
+  .sub { color: var(--muted); margin: 0 0 28px; }
+  h2 { font-size: 20px; margin: 36px 0 12px; display:flex; align-items:center; gap:12px; }
+  h2 .n { flex:none; width:32px; height:32px; border-radius:50%; background:var(--accent); color:#031a33; display:grid; place-items:center; font-size:16px; font-weight:800; }
+  h3 { font-size: 16px; margin: 22px 0 8px; color: var(--accent); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; margin:12px 0; }
+  ol, ul { padding-left: 22px; } li { margin: 6px 0; }
+  code, kbd { font-family: Consolas, monospace; background:#22262f; border:1px solid var(--line); border-radius:5px; padding:1px 6px; font-size: 14px; }
+  kbd { color: var(--accent); font-weight: 700; }
+  .file { font-weight: 700; color: #bfe0ff; }
+  .tip { border-left: 3px solid var(--ok); }
+  .warn { border-left: 3px solid var(--warn); }
+  .tip b:first-child, .warn b:first-child { display:block; margin-bottom:4px; }
+  table { width:100%; border-collapse: collapse; margin: 8px 0; font-size: 15px; }
+  td, th { text-align:left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; }
+  .chip { display:inline-block; border:1px solid rgba(52,195,176,.6); background:rgba(52,195,176,.15); color:#c8fff6; border-radius:999px; padding:0 8px; font: 600 13px Consolas, monospace; }
+  .tree { font-family: Consolas, monospace; font-size: 14px; line-height: 1.5; color: var(--muted); white-space: pre; overflow-x: auto; }
+  .tree b { color: var(--text); }
+  a { color: var(--accent); }
+  footer { margin-top: 40px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>DPLN Syra Reader</h1>
+  <p class="sub">Installation sur Windows avec le navigateur <b>Chrome</b> · environ 5 minutes, une seule fois, rien d'autre à installer.</p>
+
+  <div class="card">
+    <b>Ce que fait l'app :</b> quand tu ouvres un guide sur <b>dofuspourlesnoobs.com</b> dans Chrome, il s'affiche dans une petite fenêtre verticale que tu peux garder au-dessus du jeu. Chaque coordonnée devient un bouton <span class="chip">36,-44</span> qui copie <code>/travel 36,-44</code>, et <kbd>F8</kbd> copie le trajet suivant même quand tu es en jeu.
+  </div>
+
+  <h3>Contenu du dossier</h3>
+  <div class="card tree"><b>DPLN Syra Reader - pour Chrome</b>
+├── Tuto - à ouvrir en premier.html   ← ce fichier
+└── <b>DPLN Syra Reader</b>
+    ├── <b>1 - Installer.bat</b>
+    ├── <b>DPLN Syra Reader</b> (raccourci, créé par l'installeur)
+    ├── <b>Extension Chrome</b>             ← dossier à charger dans Chrome
+    └── (fichiers de l'app, ne pas toucher)</div>
+
+  <div class="card warn">
+    <b>Avant de commencer</b>
+    Place le dossier <span class="file">DPLN Syra Reader - pour Chrome</span> à un endroit où il restera, par exemple dans <code>Documents</code>. Ne le laisse pas dans le zip ni dans Téléchargements, sinon l'extension et le raccourci ne marcheront plus si tu le déplaces ou le supprimes.<br><br>
+    Si tu l'as reçu en <b>.zip</b> : clic droit sur le zip → <b>Propriétés</b> → coche <b>Débloquer</b> en bas → OK, <i>puis</i> clic droit → <b>Extraire tout…</b>
+  </div>
+
+  <h2><span class="n">1</span>Installer l'app</h2>
+  <ol>
+    <li>Ouvre le dossier <span class="file">DPLN Syra Reader</span>.</li>
+    <li>Double-clique sur <span class="file">1 - Installer.bat</span>. Une fenêtre noire s'ouvre et télécharge le moteur de l'app (environ 100 Mo, 1 à 3 minutes).</li>
+    <li>Quand elle affiche <b>« C'est installé ! »</b>, appuie sur une touche pour la fermer. Un raccourci <b>DPLN Syra Reader</b> (l'icône du chat) est apparu sur ton Bureau et dans le dossier.</li>
+  </ol>
+  <div class="card warn">
+    <b>Windows affiche « Windows a protégé votre ordinateur » ?</b>
+    C'est normal pour un fichier qui ne vient pas d'un éditeur connu. Clique sur <b>Informations complémentaires</b> puis <b>Exécuter quand même</b>.
+  </div>
+
+  <h2><span class="n">2</span>Installer l'extension dans Chrome</h2>
+  <p>C'est elle qui prévient l'app quand tu ouvres une page dofuspourlesnoobs.</p>
+  <ol>
+    <li>Dans Chrome, tape <code>chrome://extensions</code> dans la barre d'adresse et valide.</li>
+    <li>En haut à droite, active <b>Mode développeur</b>.</li>
+    <li>Clique sur <b>Charger l'extension non empaquetée</b> (en haut à gauche).</li>
+    <li>Va dans <span class="file">DPLN Syra Reader - pour Chrome</span> → <span class="file">DPLN Syra Reader</span>, sélectionne le dossier <span class="file">Extension Chrome</span> (un simple clic dessus) et clique sur <b>Sélectionner un dossier</b>.</li>
+    <li>La carte <b>« DPLN Syra Reader – Pont »</b> apparaît. Vérifie que son interrupteur est bien activé.</li>
+  </ol>
+  <div class="card warn">
+    <b>Erreur « Fichier manifeste absent ou illisible » ?</b>
+    Tu as choisi le mauvais dossier. Il faut sélectionner <span class="file">Extension Chrome</span> lui-même (celui qui contient <code>manifest.json</code>), pas le dossier au-dessus.
+  </div>
+
+  <h2><span class="n">3</span>Lancer et tester</h2>
+  <ol>
+    <li>Double-clique sur le raccourci <b>DPLN Syra Reader</b> du Bureau.</li>
+    <li>Dans Chrome, ouvre un guide, par exemple <a href="https://www.dofuspourlesnoobs.com/requiem-pour-un-yokai.html" target="_blank">Requiem pour un Yokai</a>.</li>
+    <li>La page s'affiche dans l'app avec le message « Page ouverte depuis le navigateur ». 🎉</li>
+  </ol>
+  <p>Place la fenêtre où tu veux (sur un 2<sup>e</sup> écran par exemple) : elle se rouvrira au même endroit.</p>
+
+  <h2><span class="n">★</span>Utilisation</h2>
+  <table>
+    <tr><th>Je veux…</th><th>Comment</th></tr>
+    <tr><td>Copier un trajet</td><td>Clic sur <span class="chip">36,-44</span> → <code>/travel 36,-44</code>. Le bouton violet <b>zaap</b> copie <code>/zaap … ; /travel …</code></td></tr>
+    <tr><td>Enchaîner les trajets de la quête</td><td><kbd>F8</kbd> trajet suivant, <kbd>F7</kbd> précédent — <b>marche même en jeu</b>. Ou le bouton bleu <b>Suivant</b>.</td></tr>
+    <tr><td>Partir d'un trajet précis</td><td>Clique dessus, puis <kbd>F8</kbd> continue à partir de lui.</td></tr>
+    <tr><td>Copier zaap + travel avec F8</td><td>Bouton <b>Zaap</b> allumé.</td></tr>
+    <tr><td>Voir les ressources / crafts</td><td>Bouton branche 🌿 en haut à gauche (pastille = craft à faire). Clic sur un nom de ressource = copié.</td></tr>
+    <tr><td>Garder la fenêtre au-dessus du jeu</td><td>Bouton épingle 📌.</td></tr>
+    <tr><td>Changer la taille du texte</td><td><kbd>Ctrl</kbd> + molette · <kbd>Ctrl</kbd> <kbd>0</kbd> pour revenir à la normale.</td></tr>
+    <tr><td>Changer les touches F7 / F8, l'écran…</td><td>Bouton réglages ⚙.</td></tr>
+    <tr><td>Voir tous les trajets d'un coup</td><td>Onglet <b>Trajets</b>.</td></tr>
+  </table>
+  <p>L'app retient pour chaque guide l'endroit où tu en étais : tu peux passer d'un onglet Chrome à l'autre sans perdre ta place.</p>
+
+  <h2><span class="n">?</span>Dépannage</h2>
+  <h3>La page ne s'affiche pas dans l'app</h3>
+  <ul>
+    <li>L'app doit être <b>ouverte avant</b> d'ouvrir la page dans Chrome. Sinon, recharge l'onglet (<kbd>F5</kbd>) ou change d'onglet et reviens.</li>
+    <li>Vérifie dans <code>chrome://extensions</code> que « DPLN Syra Reader – Pont » est activée.</li>
+    <li>Solution de secours sans extension : copie l'adresse de la page (<kbd>Ctrl</kbd>+<kbd>L</kbd> puis <kbd>Ctrl</kbd>+<kbd>C</kbd>), l'app l'ouvre toute seule.</li>
+    <li>Au démarrage, Chrome peut proposer de <b>désactiver les extensions en mode développeur</b> : ferme le message (ne clique pas sur Désactiver) pour la garder active.</li>
+  </ul>
+  <h3>F7 / F8 ne font rien en jeu</h3>
+  <ul>
+    <li>Une autre appli utilise peut-être déjà ces touches : change-les dans ⚙ → Raccourcis.</li>
+  </ul>
+  <h3>Le raccourci du Bureau ne marche plus</h3>
+  <ul>
+    <li>Tu as sûrement déplacé le dossier. Relance <span class="file">1 - Installer.bat</span> depuis son nouvel emplacement, et recharge l'extension dans Chrome depuis le nouveau dossier.</li>
+  </ul>
+
+  <h2><span class="n">↻</span>Mettre à jour</h2>
+  <ol>
+    <li>Ferme l'app.</li>
+    <li>Remplace le contenu du dossier <span class="file">DPLN Syra Reader</span> par la nouvelle version (garde le dossier <code>runtime</code>, sinon relance <span class="file">1 - Installer.bat</span>).</li>
+    <li>Dans <code>chrome://extensions</code>, clique sur ↻ sur la carte « DPLN Syra Reader – Pont ».</li>
+  </ol>
+
+  <footer>DPLN Syra Reader n'est pas lié à Ankama ni à dofuspourlesnoobs.com : il affiche simplement leurs guides publics dans un format plus pratique.</footer>
+</main>
+</body>
+</html>
